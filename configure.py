@@ -28,6 +28,7 @@ def get_default_config(dataset):
                 seed=10
             )
         )
+    
     elif dataset == 'BDGP':
         return dict(
             lr=1e-4,
