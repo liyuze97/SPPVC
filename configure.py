@@ -58,7 +58,7 @@ def get_default_config(dataset):
             )
         )
 
-    elif dataset in ['Caltech101-7']:
+    elif dataset == 'Caltech101-7':
         return dict(
             lr=1e-4,
             aligned_ratio=0.5,
