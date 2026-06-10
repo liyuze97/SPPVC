@@ -62,7 +62,7 @@ def main():
 
     # Pre-training
     print('Starting pre-training...')
-    pretrain(model, optimizer, config, X1, X2, A1, A2, labels_0, aligned_idx, unaligned_idx, device)
+    pretrain(model, optimizer, config, X1, X2, A1, A2)
 
     # Training
     print('Starting training...')
