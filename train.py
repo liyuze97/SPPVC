@@ -9,7 +9,7 @@ from utils import eval_aligned_detail, evaluation
 from calculate_graph import calculate_graphs, calculate_laplacian, calculate_cosine_similarity
 
 
-def pretrain(model, optimizer, config, x1, x2, A1, A2, labels, aligned_idx, unaligned_idx, device):
+def pretrain(model, optimizer, config, x1, x2, A1, A2):
     for epoch in range(config['pretrain_epoch']+1):
         x1_hat, z1 = model.encoders[0](x1, A1)
         x2_hat, z2 = model.encoders[1](x2, A2)
