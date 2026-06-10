@@ -13,7 +13,7 @@ from model import MyPVC
 
 parser = argparse.ArgumentParser(description='SPPVC')
 parser.add_argument('--dataset', default='WebKB',
-                                 choices=['WebKB', 'Caltech101-7', 'HandWritten', 'BDGP', 'Reuters'])
+                                 choices=['WebKB', 'Caltech101-7', 'HandWritten', 'BDGP', 'Fashion', 'Reuters'])
 parser.add_argument('--devices', type=str, default='0', help='gpu device ids')
 args = parser.parse_args()
 
