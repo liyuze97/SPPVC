@@ -56,8 +56,8 @@ def main():
     model.to(device)
     main_params = [p for p in model.parameters() if p not in set(model.got.parameters())]
     optimizer = optim.Adam([
-        {'params': main_params, 'lr': config['lr']},  # 主参数组
-        {'params': model.got.parameters(), 'lr': config['got']['lr']}  # got 参数组
+        {'params': main_params, 'lr': config['lr']}, 
+        {'params': model.got.parameters(), 'lr': config['got']['lr']}  
     ])
 
     # Pre-training
