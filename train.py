@@ -41,7 +41,7 @@ def train(model, optimizer, x1, x2, A1, A2, labels_0, labels_1, aligned_idx, una
         # Reconstruction loss
         recon_loss_x = loss_fn(x1_hat, x1) + loss_fn(x2_hat, x2)
         # Contrastive loss
-        contrast_loss = criterion([h1[aligned_idx], h2[aligned_idx]], epoch, config)
+        contrast_loss = criterion([h1[aligned_idx], h2[aligned_idx]])
 
         total_loss = recon_loss_x + contrast_loss * lambda1
 
