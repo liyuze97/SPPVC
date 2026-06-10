@@ -27,7 +27,8 @@ class WeightedContrastiveLoss(nn.Module):
                 h_u = h_views[u]
 
                 sim_vu = torch.matmul(h_v, h_u.T).clamp(min=1e-6, max=1.0)
-                rho = (1.0 - sim_vu).pow(self.beta)
+                with torch.no_grad():
+                    rho = (1.0 - sim_vu).pow(self.beta)
 
                 pos_sim = torch.sum(h_v * h_u, dim=1)
                 pos_logits = torch.exp(pos_sim / self.tau)
