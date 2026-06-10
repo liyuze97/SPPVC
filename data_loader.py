@@ -7,7 +7,7 @@ from construct_graph import get_graph
 
 
 def load_data(dataset, config):
-    data_dir = "../PVC_data/Datasets/{}.mat".format(dataset)
+    data_dir = "../Datasets/{}.mat".format(dataset)
     data, label, A = [], [], []
     mat = sio.loadmat(data_dir)
 
