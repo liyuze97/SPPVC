@@ -99,7 +99,7 @@ def train(model, optimizer, x1, x2, A1, A2, labels_0, labels_1, aligned_idx, una
         h2 = model.feature_contrastive_module(z2)
 
         h2_hat = P_global @ h2
-        contrast_loss = criterion([h1, h2_hat], epoch, config)
+        contrast_loss = criterion([h1, h2_hat])
         total_loss = contrast_loss * lambda1
 
         optimizer.zero_grad()
