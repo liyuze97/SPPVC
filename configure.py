@@ -88,7 +88,7 @@ def get_default_config(dataset):
 
     elif dataset == 'WebKB':
         return dict(
-            lr=1e-4,  # 学习率
+            lr=1e-4, 
             aligned_ratio=0.5,
             beta=0.5,
 
